@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Leveling - Ultimate Fan Site</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(90deg, #000428, #004e92);
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 20px;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #f1c40f;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        section {
+            padding: 50px 20px;
+        }
+        button {
+            background-color: #f1c40f;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #e67e22;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Solo Leveling - The Ultimate Fan Hub</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#manga-anime">Manga & Anime</a></li>
+                <li><a href="#characters">Characters</a></li>
+                <li><a href="#abilities">Abilities</a></li>
+                <li><a href="#arcs">Arcs & Story</a></li>
+                <li><a href="#world">World & Lore</a></li>
+                <li><a href="#media">Media</a></li>
+                <li><a href="#community">Community</a></li>
+                <li><a href="#merch">Merch</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="home">
+        <h2>Welcome to the Ultimate Solo Leveling Fan Site</h2>
+        <p>Explore everything about Solo Leveling, from its anime and manga to character breakdowns and lore.</p>
+    </section>
+    
+    <section id="manga-anime">
+        <h2>Manga & Anime</h2>
+        <p>Get details on the web novel, manhwa, and anime adaptation, including episode and chapter breakdowns.</p>
+    </section>
+    
+    <section id="characters">
+        <h2>Characters</h2>
+        <input type="text" id="characterSearch" placeholder="Search characters...">
+        <ul id="characterList">
+            <li>Sung Jin-Woo</li>
+            <li>Cha Hae-In</li>
+            <li>Go Gun-Hee</li>
+            <li>Monarch of Frost</li>
+            <li>Ant King</li>
+        </ul>
+    </section>
+    
+    <section id="abilities">
+        <h2>Abilities & Skills</h2>
+        <p>Discover the power ranking system, shadow monarch skills, and other abilities.</p>
+    </section>
+    
+    <section id="arcs">
+        <h2>Arcs & Storyline</h2>
+        <p>Read about the key battles, dungeon raids, and the overarching war of Monarchs vs. Rulers.</p>
+    </section>
+    
+    <section id="world">
+        <h2>World & Lore</h2>
+        <p>Dive into the Hunter Association, guilds, dungeons, and the mysterious system.</p>
+    </section>
+    
+    <section id="media">
+        <h2>Media & Gallery</h2>
+        <p>Watch trailers, view official artworks, and relive the best fight scenes.</p>
+        <video controls>
+            <source src="trailer.mp4" type="video/mp4">
+        </video>
+        <img src="sungjinwoo.jpg" alt="Sung Jin-Woo in action">
+    </section>
+    
+    <section id="community">
+        <h2>Community & Discussion</h2>
+        <p>Join discussions, share theories, and participate in fan polls.</p>
+        <textarea placeholder="Share your thoughts..."></textarea>
+        <button>Submit</button>
+    </section>
+    
+    <section id="merch">
+        <h2>Merch & Games</h2>
+        <p>Find official Solo Leveling merchandise and stay updated on the upcoming game.</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Solo Leveling Fan Site. All rights reserved.</p>
+    </footer>
+</body>
+</html>
