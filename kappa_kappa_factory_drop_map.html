@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kappa Kappa Factory Drop Map</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; }
+        table { border-collapse: collapse; margin: 20px auto; }
+        td { width: 60px; height: 60px; border: 1px solid #555; text-align: center; vertical-align: middle; }
+        .high { background-color: #4CAF50; color: #fff; }
+        .medium { background-color: #FFC107; }
+        .low { background-color: #9E9E9E; }
+        .danger { background-color: #F44336; color: #fff; }
+        .legend { width: 300px; margin: 0 auto; }
+        .legend div { display: flex; align-items: center; margin-bottom: 4px; }
+        .legend span.box { width: 20px; height: 20px; display: inline-block; margin-right: 8px; }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Kappa Kappa Factory Drop Map</h1>
+    <table>
+        <tr>
+            <td class="high">Roof</td>
+            <td class="medium"></td>
+            <td class="medium">Crates</td>
+            <td class="low"></td>
+            <td class="danger">Patrol</td>
+        </tr>
+        <tr>
+            <td class="medium">Silo</td>
+            <td class="high">Main Hall</td>
+            <td class="medium"></td>
+            <td class="medium">Storage</td>
+            <td class="low"></td>
+        </tr>
+        <tr>
+            <td class="low"></td>
+            <td class="medium"></td>
+            <td class="high">Factory Floor</td>
+            <td class="medium"></td>
+            <td class="low"></td>
+        </tr>
+        <tr>
+            <td class="danger">Lava Pit</td>
+            <td class="medium">Conveyor</td>
+            <td class="medium"></td>
+            <td class="high">Office</td>
+            <td class="medium"></td>
+        </tr>
+        <tr>
+            <td class="low"></td>
+            <td class="medium"></td>
+            <td class="low">Parking</td>
+            <td class="medium"></td>
+            <td class="high">Dock</td>
+        </tr>
+    </table>
+    <div class="legend">
+        <div><span class="box high"></span>High tier loot</div>
+        <div><span class="box medium"></span>Medium tier loot</div>
+        <div><span class="box low"></span>Low tier loot</div>
+        <div><span class="box danger"></span>Hazardous zone</div>
+    </div>
+</body>
+</html>
