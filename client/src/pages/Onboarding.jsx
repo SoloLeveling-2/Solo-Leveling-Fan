@@ -15,7 +15,7 @@ const DIFFICULTIES = [
     { id: 'Advanced', title: 'Advanced', desc: 'The full Solo Leveling challenge. 100 reps + 10 km run.', recommended: 'For experienced trainees — this is no joke.' }
 ];
 
-export default function Onboarding() {
+export default function Onboarding({ onComplete }) {
     const navigate = useNavigate();
     const [step, setStep] = useState(0);
     const [name, setName] = useState('');
@@ -49,6 +49,7 @@ export default function Onboarding() {
             await api.post('/checklist/preset', { difficulty });
             if (startWeight) await api.post('/weights', { weight: Number(startWeight) });
             setSaveMessage('Registration saved. Your onboarding will stay complete after refresh.');
+            await onComplete?.();
             navigate('/');
         } catch (saveError) {
             setError(saveError.message || 'The system could not save onboarding. Please try again before refreshing.');

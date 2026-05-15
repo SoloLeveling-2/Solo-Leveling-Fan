@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { api } from '../api/client.js';
 
-export default function Profile() {
+export default function Profile({ onSaved }) {
     const [profile, setProfile] = useState(null);
     const [stats, setStats] = useState(null);
     const [saving, setSaving] = useState(false);
@@ -39,6 +39,7 @@ export default function Profile() {
             const updated = await api.put('/profile', profile);
             setProfile(updated);
             setSaveMessage('Profile saved. Refreshing will keep these changes.');
+            await onSaved?.();
         } catch (saveError) {
             setError(saveError.message || 'Profile did not save. Please try again.');
         } finally {

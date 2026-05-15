@@ -70,7 +70,7 @@ function Shell() {
     }, [profile, location.pathname, navigate]);
 
     if (location.pathname === '/welcome') {
-        return <Onboarding />;
+        return profile?.onboarded ? <Navigate to="/" replace /> : <Onboarding onComplete={refresh} />;
     }
 
     return (

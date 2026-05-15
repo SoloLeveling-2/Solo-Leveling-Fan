@@ -50,7 +50,7 @@ function HowToPanel({ exercise }) {
     );
 }
 
-export default function Checklist() {
+export default function Checklist({ onSaved }) {
     const [items, setItems] = useState([]);
     const [date, setDate] = useState('');
     const [difficulty, setDifficulty] = useState('Beginner');
@@ -85,6 +85,7 @@ export default function Checklist() {
             const result = await api.put(`/checklist/${item.id}`, { done: !item.done });
             setStatus(result.completionRecorded ? 'Quest cleared and saved.' : 'Checklist saved.');
             await loadAll();
+            await onSaved?.();
         } catch (saveError) {
             setError(saveError.message || 'Unable to save checklist progress. Refresh was not changed.');
         }
@@ -99,6 +100,7 @@ export default function Checklist() {
             setText('');
             setStatus('Objective saved.');
             await loadAll();
+            await onSaved?.();
         } catch (saveError) {
             setError(saveError.message || 'Unable to save the objective.');
         }
@@ -110,6 +112,7 @@ export default function Checklist() {
             await api.del(`/checklist/${id}`);
             setStatus('Objective removed.');
             await loadAll();
+            await onSaved?.();
         } catch (deleteError) {
             setError(deleteError.message || 'Unable to remove the objective.');
         }
@@ -123,6 +126,7 @@ export default function Checklist() {
             setExpanded({});
             setStatus(`Difficulty set to ${level} and saved.`);
             await loadAll();
+            await onSaved?.();
         } catch (saveError) {
             setError(saveError.message || 'Unable to save the difficulty preset.');
         }

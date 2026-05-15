@@ -12,7 +12,12 @@
   "checklist": {
     "date": "2026-05-15",
     "difficulty": "Beginner",
-    "items": [],
+    "items": [
+      { "id": "beginner-pushups", "text": "10 push-ups or wall push-ups", "difficulty": "Beginner", "done": false },
+      { "id": "beginner-situps", "text": "10 sit-ups or dead bugs", "difficulty": "Beginner", "done": false },
+      { "id": "beginner-squats", "text": "10 squats or chair squats", "difficulty": "Beginner", "done": false },
+      { "id": "beginner-running", "text": "Walk or jog 1 km", "difficulty": "Beginner", "done": false }
+    ],
     "completedDays": []
   },
   "meals": [],
@@ -25,5 +30,50 @@
     "rank": "E-Rank",
     "currentStreak": 0
   },
-  "exercises": []
+  "exercises": [
+    {
+      "id": "pushups",
+      "name": "Push-ups",
+      "beginnerSummary": "Push-ups build chest, shoulder, triceps, and core strength. Beginners can use wall push-ups or knee push-ups first.",
+      "videoUrl": "https://www.youtube.com/watch?v=IODxDxX7oi4",
+      "imageUrl": "",
+      "imageCaption": "Keep a straight line from shoulders through hips and brace the core.",
+      "instructions": ["Start in a high plank or elevated wall position.", "Place hands slightly wider than shoulders.", "Lower with control, then press away from the floor or wall."],
+      "tips": ["Use wall push-ups if floor reps are too hard.", "Keep elbows roughly 45 degrees from your body.", "Stop if wrists or shoulders feel sharp pain."],
+      "youtubeQuery": "beginner push up proper form tutorial"
+    },
+    {
+      "id": "situps",
+      "name": "Sit-ups",
+      "beginnerSummary": "Sit-ups train the front of the core. If your lower back feels uncomfortable, use dead bugs or crunches instead.",
+      "videoUrl": "https://www.youtube.com/watch?v=1fbU_MkV7NE",
+      "imageUrl": "",
+      "imageCaption": "Move slowly and avoid yanking on your neck.",
+      "instructions": ["Lie on your back with knees bent.", "Brace your stomach before moving.", "Curl up under control, then lower slowly."],
+      "tips": ["Keep the neck relaxed.", "Exhale as you come up.", "Switch to dead bugs if your back feels strained."],
+      "youtubeQuery": "beginner sit up proper form tutorial"
+    },
+    {
+      "id": "squats",
+      "name": "Squats",
+      "beginnerSummary": "Squats train the legs and hips. Chair squats are the safest beginner version because they teach depth and balance.",
+      "videoUrl": "https://www.youtube.com/watch?v=YaXPRqUwItQ",
+      "imageUrl": "",
+      "imageCaption": "Sit hips back toward a chair while keeping your chest tall.",
+      "instructions": ["Stand with feet about shoulder-width apart.", "Push hips back like sitting into a chair.", "Stand tall by pressing through the whole foot."],
+      "tips": ["Use a chair or counter for support.", "Keep knees tracking over toes.", "Stop before knee or hip pain."],
+      "youtubeQuery": "beginner chair squat proper form tutorial"
+    },
+    {
+      "id": "running",
+      "name": "Running",
+      "beginnerSummary": "Running can be scaled to walking intervals. Keep the pace conversational and build distance slowly.",
+      "videoUrl": "https://www.youtube.com/watch?v=_kGESn8ArrU",
+      "imageUrl": "",
+      "imageCaption": "Use short relaxed steps and keep breathing steady.",
+      "instructions": ["Warm up with five minutes of walking.", "Alternate easy jogging and walking if needed.", "Finish with a slow walk to recover."],
+      "tips": ["Start with walking if running is too intense.", "Keep shoulders relaxed.", "Do not chase speed on beginner days."],
+      "youtubeQuery": "beginner running form tutorial walk jog intervals"
+    }
+  ]
 }
