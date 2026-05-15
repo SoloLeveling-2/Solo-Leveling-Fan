@@ -3,100 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solo Leveling - Ultimate Fan Site</title>
+    <meta name="description" content="A Solo Leveling-inspired hunter dashboard and beginner workout quest tracker.">
+    <title>Solo Leveling Hunter Tracker</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <header>
-        <h1>Solo Leveling - The Ultimate Fan Hub</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#manga-anime">Manga & Anime</a></li>
-                <li><a href="#characters">Characters</a></li>
-                <li><a href="#abilities">Abilities</a></li>
-                <li><a href="#arcs">Arcs & Story</a></li>
-                <li><a href="#world">World & Lore</a></li>
-                <li><a href="#media">Media</a></li>
-                <li><a href="#community">Community</a></li>
-                <li><a href="#merch">Merch</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="home">
-        <h2>Welcome to the Ultimate Solo Leveling Fan Site</h2>
-        <p>Explore everything about Solo Leveling, from its anime and manga to character breakdowns and lore.</p>
-    </section>
-    
-    <section id="manga-anime">
-        <h2>Manga & Anime</h2>
-        <p>Get details on the web novel, manhwa, and anime adaptation, including episode and chapter breakdowns.</p>
-    </section>
-    
-    <section id="characters">
-        <h2>Characters</h2>
-        <input type="text" id="characterSearch" placeholder="Search characters...">
-        <ul id="characterList">
-            <li>Sung Jin-Woo</li>
-            <li>Cha Hae-In</li>
-            <li>Go Gun-Hee</li>
-            <li>Monarch of Frost</li>
-            <li>Ant King</li>
-        </ul>
-    </section>
-    
-    <section id="abilities">
-        <h2>Abilities & Skills</h2>
-        <p>Discover the power ranking system, shadow monarch skills, and other abilities.</p>
-        <ul>
-            <li>Shadow Extraction</li>
-            <li>Kamish's Wrath</li>
-            <li>Stealth</li>
-            <li>Dragon's Fear</li>
-        </ul>
-    </section>
-    
-    <section id="arcs">
-        <h2>Arcs & Storyline</h2>
-        <p>Read about the key battles, dungeon raids, and the overarching war of Monarchs vs. Rulers.</p>
-        <ul>
-            <li>Job Change Arc</li>
-            <li>Red Gate Arc</li>
-            <li>Japan Raid Arc</li>
-            <li>Final Monarch War</li>
-        </ul>
-    </section>
-    
-    <section id="world">
-        <h2>World & Lore</h2>
-        <p>Dive into the Hunter Association, guilds, dungeons, and the mysterious system.</p>
-    </section>
-    
-    <section id="media">
-        <h2>Media & Gallery</h2>
-        <p>Watch trailers, view official artworks, and relive the best fight scenes.</p>
-        <video controls>
-            <source src="trailer.mp4" type="video/mp4">
-        </video>
-        <img src="sungjinwoo.jpg" alt="Sung Jin-Woo in action">
-    </section>
-    
-    <section id="community">
-        <h2>Community & Discussion</h2>
-        <p>Join discussions, share theories, and participate in fan polls.</p>
-        <textarea placeholder="Share your thoughts..."></textarea>
-        <button>Submit</button>
-    </section>
-    
-    <section id="merch">
-        <h2>Merch & Games</h2>
-        <p>Find official Solo Leveling merchandise and stay updated on the upcoming game.</p>
-    </section>
-    
-    <footer>
-        <p>&copy; 2025 Solo Leveling Fan Site. All rights reserved.</p>
-    </footer>
+    <a class="skip-link" href="#main-content">Skip to tracker</a>
+
+    <div class="app-shell">
+        <header class="hero" aria-labelledby="page-title">
+            <nav class="top-nav" aria-label="Primary navigation">
+                <a class="brand" href="#top" aria-label="Solo Leveling Hunter Tracker home">
+                    <span class="brand-mark" aria-hidden="true">SL</span>
+                    <span>Hunter Tracker</span>
+                </a>
+                <div class="nav-links">
+                    <a href="#dashboard">Dashboard</a>
+                    <a href="#quest">Quest</a>
+                    <a href="#rules">Beginner rules</a>
+                </div>
+            </nav>
+
+            <section class="hero-grid" id="top">
+                <div class="hero-copy">
+                    <p class="eyebrow">⚔️ Daily Quest System Online</p>
+                    <h1 id="page-title">Train like an E-Rank hunter, level up safely.</h1>
+                    <p class="hero-description">A cleaner Solo Leveling-inspired dashboard for beginner workouts. Check off simple quests, earn XP, watch your rank progress, and keep every step easy enough to repeat tomorrow.</p>
+                    <div class="hero-actions">
+                        <a class="button" href="#quest">Start today&apos;s quest</a>
+                        <a class="button secondary" href="#dashboard">Review dashboard</a>
+                    </div>
+                </div>
+
+                <aside class="hunter-card" aria-label="Hunter profile summary">
+                    <div class="hunter-card-header">
+                        <div class="avatar" aria-hidden="true">🗡️</div>
+                        <div>
+                            <p class="rank-label">Current Rank</p>
+                            <h2 id="rankName">E-Rank Hunter</h2>
+                        </div>
+                    </div>
+                    <p class="helper">Complete daily beginner quests to fill the promotion bar. Your checklist progress is saved on this device.</p>
+                    <div class="progress-block">
+                        <div class="progress-copy">
+                            <span>Promotion XP</span>
+                            <strong><span id="promotionXp">0</span> / 200</strong>
+                        </div>
+                        <div class="progress-track" aria-label="Promotion XP progress" role="progressbar" aria-valuemin="0" aria-valuemax="200" aria-valuenow="0">
+                            <div class="progress-fill" id="promotionFill"></div>
+                        </div>
+                    </div>
+                    <div class="quick-stats" aria-label="Quick training stats">
+                        <div class="stat"><strong id="completedCount">0</strong><span>Tasks done</span></div>
+                        <div class="stat"><strong id="remainingCount">9</strong><span>Remaining</span></div>
+                        <div class="stat"><strong id="streakCount">1</strong><span>Day streak</span></div>
+                    </div>
+                </aside>
+            </section>
+        </header>
+
+        <main id="main-content">
+            <section class="section" id="dashboard" aria-labelledby="dashboard-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow compact">Mission control</p>
+                        <h2 id="dashboard-title">Hunter Dashboard</h2>
+                        <p class="helper">At-a-glance progress, beginner pacing, and the next best action.</p>
+                    </div>
+                    <span class="status-pill" id="questStatus">Quest not started</span>
+                </div>
+
+                <div class="dashboard-grid">
+                    <article class="panel progress-panel">
+                        <div class="panel-title-row">
+                            <h3>Today&apos;s quest progress</h3>
+                            <strong id="completionRate">0%</strong>
+                        </div>
+                        <div class="large-progress" aria-label="Daily quest completion" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                            <div id="dailyFill"></div>
+                        </div>
+                        <div class="metric-grid">
+                            <div class="metric"><small>XP earned</small><strong id="xpEarned">0</strong></div>
+                            <div class="metric"><small>Estimated time</small><strong>18 min</strong></div>
+                            <div class="metric"><small>Intensity</small><strong>Easy</strong></div>
+                            <div class="metric"><small>Focus</small><strong>Full body</strong></div>
+                        </div>
+                    </article>
+
+                    <article class="panel">
+                        <h3>Beginner raid plan</h3>
+                        <ul class="raid-plan" aria-label="Weekly beginner training plan">
+                            <li><span class="plan-dot done"></span><span><strong>Monday</strong><small>Full-body quest</small></span><span class="tag">Done</span></li>
+                            <li><span class="plan-dot active"></span><span><strong>Wednesday</strong><small>Walk + core practice</small></span><span class="tag next">Next</span></li>
+                            <li><span class="plan-dot"></span><span><strong>Friday</strong><small>Strength + stretch</small></span><span class="tag">Easy</span></li>
+                        </ul>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="quest" aria-labelledby="quest-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow compact">Beginner safe checklist</p>
+                        <h2 id="quest-title">Daily Quest</h2>
+                        <p class="helper">Three small phases with clear reps, rest guidance, and scale-down options.</p>
+                    </div>
+                    <button class="button secondary" type="button" id="resetQuest">Reset today</button>
+                </div>
+
+                <div class="quest-grid">
+                    <article class="quest-card">
+                        <div class="quest-card-heading"><span aria-hidden="true">🔥</span><div><h3>Warm up</h3><p>Prepare joints before reps.</p></div></div>
+                        <ol class="task-list">
+                            <li><label><input type="checkbox" data-xp="10"><span><span class="task-name">March in place</span><span class="task-meta">2 minutes. Easy pace, relaxed shoulders, steady breathing.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="10"><span><span class="task-name">Arm circles</span><span class="task-meta">10 forward + 10 backward. Move slowly and keep the neck loose.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="10"><span><span class="task-name">Hip hinges</span><span class="task-meta">8 reps. Push hips back, soft knees, stop before discomfort.</span></span></label></li>
+                        </ol>
+                    </article>
+
+                    <article class="quest-card featured">
+                        <div class="quest-card-heading"><span aria-hidden="true">💪</span><div><h3>Strength circuit</h3><p>Rest 45–60 seconds between moves.</p></div></div>
+                        <ol class="task-list">
+                            <li><label><input type="checkbox" data-xp="25"><span><span class="task-name">Chair squats</span><span class="task-meta">2 sets of 6–8. Use your hands for support if needed.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="25"><span><span class="task-name">Wall push-ups</span><span class="task-meta">2 sets of 6–10. Stand closer to the wall to make it easier.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="25"><span><span class="task-name">Dead bug taps</span><span class="task-meta">2 sets of 5 per side. Slow reps, comfortable lower back.</span></span></label></li>
+                        </ol>
+                    </article>
+
+                    <article class="quest-card">
+                        <div class="quest-card-heading"><span aria-hidden="true">🛡️</span><div><h3>Cool down</h3><p>Recover so tomorrow is easier.</p></div></div>
+                        <ol class="task-list">
+                            <li><label><input type="checkbox" data-xp="15"><span><span class="task-name">Easy walk</span><span class="task-meta">5 minutes. Keep it conversational, not breathless.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="15"><span><span class="task-name">Calf + chest stretch</span><span class="task-meta">20 seconds each. Gentle tension only; never sharp pain.</span></span></label></li>
+                            <li><label><input type="checkbox" data-xp="15"><span><span class="task-name">Hydration check</span><span class="task-meta">Drink water and write down one workout win.</span></span></label></li>
+                        </ol>
+                    </article>
+                </div>
+            </section>
+
+            <section class="section" id="rules" aria-labelledby="rules-title">
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow compact">Stay consistent</p>
+                        <h2 id="rules-title">Beginner Hunter Rules</h2>
+                    </div>
+                </div>
+                <div class="rules-grid">
+                    <article class="rule-card"><strong>Keep one rep in reserve.</strong><p class="helper">Finish feeling like you could do a little more. Repeatability is the goal.</p></article>
+                    <article class="rule-card"><strong>Scale before you quit.</strong><p class="helper">Use a taller chair, stand closer to the wall, or do one set instead of two.</p></article>
+                    <article class="rule-card"><strong>Stop for sharp pain.</strong><p class="helper">Effort is fine. Joint pain, dizziness, or sharp pain means stop and recover.</p></article>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>Solo Leveling Hunter Tracker • Fan-made training dashboard • Clear quests, safe progress.</p>
+        </footer>
+    </div>
 </body>
 </html>

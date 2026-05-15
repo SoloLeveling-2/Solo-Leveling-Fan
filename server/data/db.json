@@ -1,0 +1,29 @@
+{
+  "profile": {
+    "name": "",
+    "goal": "general_fitness",
+    "age": null,
+    "height": null,
+    "startWeight": null,
+    "goalWeight": null,
+    "onboarded": false,
+    "createdAt": "2026-05-15T00:00:00.000Z"
+  },
+  "checklist": {
+    "date": "2026-05-15",
+    "difficulty": "Beginner",
+    "items": [],
+    "completedDays": []
+  },
+  "meals": [],
+  "weights": [],
+  "sessions": [],
+  "achievements": [],
+  "progress": {
+    "xp": 0,
+    "level": 1,
+    "rank": "E-Rank",
+    "currentStreak": 0
+  },
+  "exercises": []
+}

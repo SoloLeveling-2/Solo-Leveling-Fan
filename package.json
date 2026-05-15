@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "test": "node --check server/server.js && node --check client/src/api/client.js && node --check client/src/lib/media.js"
+  },
+  "dependencies": {
+    "@vitejs/plugin-react": "latest",
+    "vite": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "react-router-dom": "latest",
+    "express": "latest"
+  },
+  "devDependencies": {}
+}
